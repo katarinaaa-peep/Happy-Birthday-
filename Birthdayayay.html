@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <style>
+        body {
+            background-color: #ffe6f0;
+            font-family: 'Gerogia' , serif;
+            color: #c2185b;
+            text-align: center;
+            padding: 40px;
+        }
+        button {
+            background-color: #f48fb1;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .heart {
+            position: fixed;
+            font-size: 24px;
+            animation: fall 4s linear infinite;
+            opacity: 0.8;
+        }
+        @keyframes fall {
+            0% {top: -10%; opacity: 1; } 
+            100% { top: 110%; opacity: 0;}
+        }
+        </style> 
+<h1 id="typewriter"></h1>
+<p>Happy Birthday Cazzy!</p>
+<p>I wish you the best in life!</p>
+<p>yayyyy ^^</p>
+<p>Will you accept the ugly cat guy as your partner</p>
+<button onclick="answer('yes')">Y</button>
+<button onclick="answer('no')">N</button>
+<p id="response"></p>
+<script>
+function answer(choice) {
+if (choice === 'yes') {
+    document.getElementById('response').innerText = "YAYYYYYYY" 
+} else { 
+document.getElementById('response').innerText = "alr, ana man jud ka......."
+}
+}
+const text = "Hi   bubbbb!";
+let i = 0;
+function type() {
+    if (i < text.length) {
+        document.getElementById('typewriter').innerText += text[i];
+        i++;
+        setTimeout(type, 100);
+    }
+}
+type();
+</script>
+
+</body>
+</html>
